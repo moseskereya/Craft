@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@using Crafts.Components
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h4 class="display-4">Home Of Crafts</h4>
+</div>
+
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+<script src="_framework/blazor.server.js"></script>
+
